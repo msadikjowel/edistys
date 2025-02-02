@@ -13,23 +13,29 @@ const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isENOpen, setIsENOpen] = useState(true);
+  const [color, setColor] = useState(false);
 
   const handleButtonToggle = () => {
     setShowMenu(!showMenu);
   };
 
-  //   nav bg change on scroll
-  const [color, setColor] = useState(false);
+  // Nav bg change on scroll
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 64) {
+        setColor(true);
+      } else {
+        setColor(false);
+      }
+    };
 
-  const changeColor = () => {
-    if (window.scrollY >= 64) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
+    window.addEventListener("scroll", changeColor);
 
-  window.addEventListener("scroll", changeColor);
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
 
   return (
     <header
