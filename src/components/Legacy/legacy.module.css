@@ -1,0 +1,45 @@
+.legacyContainer {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #005bc4;
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+  z-index: 99;
+  overflow: hidden;
+}
+
+.legacyContent {
+  margin-left: 10rem;
+}
+.legacyContent h2 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+}
+.legacyContent p {
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+.legacyContent button {
+  background-color: #fe8b53;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .legacyContainer {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .legacyContent {
+    margin: 2rem;
+  }
+}

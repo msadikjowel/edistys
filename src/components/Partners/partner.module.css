@@ -1,0 +1,13 @@
+.logoContainer {
+  padding: 5rem 0;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: auto;
+  max-width: 85%;
+}
+
+.logoImage {
+  padding: 0 2rem;
+}

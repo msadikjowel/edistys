@@ -1,0 +1,30 @@
+@media screen and (max-width: 768px) {
+  .tabContainer {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+  }
+  .tabDiv {
+    /* border: 1px solid yellow; */
+    width: 100%;
+  }
+  .tabImage {
+    margin-left: 0.1px;
+    margin-top: 1rem;
+  }
+
+  .tabButtonDiv {
+    /* border: 1px solid red; */
+    flex-wrap: wrap;
+  }
+  .tabButtonDiv button {
+    width: auto;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tabDiv h1 {
+    font-size: 2rem;
+  }
+}

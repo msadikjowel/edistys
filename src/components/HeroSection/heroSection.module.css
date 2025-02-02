@@ -1,0 +1,219 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 102vh;
+  background: linear-gradient(135deg, #0066cc, #003399);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  padding: 2rem;
+
+  clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+  overflow: hidden;
+}
+
+.heroContent {
+  z-index: 1;
+  max-width: 50%;
+  position: left;
+  margin-left: 6%;
+}
+
+.heroContent h1 {
+  font-size: 80px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.heroContent p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.heroButton {
+  background-color: #fe8b53;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.heroImageWrapper {
+  position: absolute;
+  right: 5%;
+  bottom: -50%;
+  width: 500px;
+  height: 165%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: rotate(40deg);
+}
+
+.heroImage {
+  position: absolute;
+
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/heroImage.jpg");
+  background-size: cover;
+  background-position: -30rem -10rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transform: rotate(-40deg) scale(2);
+  transform-origin: center;
+  animation: slidein 0.5s ease-in forwards;
+}
+
+@keyframes slidein {
+  from {
+    right: -20%;
+  }
+  to {
+    right: 0%;
+  }
+}
+
+.cornerDiv {
+  position: absolute;
+  width: 420px;
+  height: 800px;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 172, 238, 1) 0%,
+    rgba(31, 128, 240, 1) 100%
+  );
+
+  top: -140;
+  right: -190;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom left,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0) 40%
+  );
+  mask-image: linear-gradient(
+    to bottom left,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0) 55%
+  );
+  transform: rotate(-50deg);
+}
+
+/* animated SVG */
+
+.animationDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.svg1 {
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+
+.svg2 {
+  bottom: 0;
+  right: 0;
+  opacity: 0.2;
+}
+
+/* media queries */
+@media screen and (max-width: 1400px) {
+  .heroContent {
+    /* border: 1px solid red; */
+    max-width: 60%;
+  }
+  .heroImageWrapper {
+    right: 5%;
+    bottom: -40%;
+    width: 400px;
+    height: 160%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .heroContent h1 {
+    font-size: 70px;
+  }
+
+  .heroContent p {
+    font-size: 18px;
+  }
+
+  .heroImageWrapper {
+    right: 0%;
+  }
+
+  .cornerDiv {
+    position: absolute;
+    width: 350px;
+    height: 700px;
+
+    top: -95;
+    right: -210;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cornerDiv {
+    display: none;
+  }
+  .heroSection {
+    flex-direction: column;
+    height: auto;
+  }
+  .heroContent {
+    max-width: 90%;
+  }
+
+  .heroImageWrapper {
+    margin-top: 4rem;
+    position: relative;
+    right: 0%;
+    bottom: 0%;
+    width: 120%;
+    height: 500px;
+    overflow: hidden;
+    transform: rotate(-5deg);
+    z-index: 111;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroSection {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+
+  .heroImageWrapper {
+    margin-bottom: -4rem;
+    width: 120%;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .heroContent h1 {
+    font-size: 52px;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+  }
+  .heroImageWrapper {
+    margin-bottom: -4rem;
+    width: 140%;
+    height: 350px;
+  }
+}
